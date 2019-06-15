@@ -1,0 +1,32 @@
+<!-- SIDENAV HEADER -->
+
+<!-- / SIDENAV HEADER -->
+
+<!-- SIDENAV CONTENT -->
+<div class="content" fusePerfectScrollbar *fuseIfOnDom [@animate]="{value:'*',params:{y:'50px'}}">
+
+    <div class="p-24">
+        <button mat-raised-button fxFlex
+                class="mat-accent compose-dialog-button"
+                (click)="composeDialog()"
+                aria-label="Compose">
+            ارسال شكوى
+        </button>
+    </div>
+
+    <div class="nav">
+
+
+        <div class="nav-subheader">الحالات</div>
+
+        <div class="nav-item" *ngFor="let label of labels">
+            <a class="nav-link" matRipple [routerLink]="'/apps/mail/label/' + label.handle" routerLinkActive="active">
+                <mat-icon class="nav-link-icon" [ngStyle]="{'color':label.color}">label</mat-icon>
+                <span>{{label.title}}</span>
+            </a>
+        </div>
+
+    </div>
+
+</div>
+<!-- / SIDENAV CONTENT -->

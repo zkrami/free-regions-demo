@@ -1,0 +1,464 @@
+<div id="dashboard-project" class="page-layout simple right-sidenav" fxLayout="row">
+
+    <mat-sidenav-container>
+
+        <!-- CENTER -->
+        <div class="center" fusePerfectScrollbar>
+
+        
+
+            <!-- CONTENT -->
+            <div class="content">
+
+                <mat-tab-group dynamicHeight>
+
+                    <mat-tab label="الرئيسية">
+
+                        <div class="widget-group p-12" fxLayout="row" fxFlex="100" fxLayoutWrap *fuseIfOnDom [@animateStagger]="{value:'50'}">
+
+                            <!-- WIDGET 1 -->
+                            <fuse-widget [@animate]="{value:'*',params:{y:'100%'}}" class="widget" fxLayout="column" fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="25">
+
+                                <!-- Front -->
+                                <div class="fuse-widget-front mat-white-bg mat-elevation-z2">
+                                    <div class="pl-16 pr-8 py-16 h-52" fxLayout="row" fxLayoutAlign="space-between center">
+                                        
+                                        <button mat-icon-button fuseWidgetToggle aria-label="more">
+                                            <mat-icon>more_vert</mat-icon>
+                                        </button>
+                                    </div>
+
+                                    <div class="pt-8 pb-32" fxLayout="column" fxLayoutAlign="center center">
+                                        <div class="light-blue-fg font-size-72 line-height-72">
+                                            {{widgets.widget1.data.count[widgets.widget1.currentRange]}}
+                                        </div>
+                                        <div class="h1 secondary-text font-weight-500">اجمالي الطلبات</div>
+                                    </div>
+
+                                </div>
+                                <!-- / Front -->
+
+                                <!-- Back -->
+                                <div class="fuse-widget-back p-16 pt-32 mat-white-bg mat-elevation-z2">
+                                    <button mat-icon-button fuseWidgetToggle class="fuse-widget-flip-button"
+                                            aria-label="Flip widget">
+                                        <mat-icon class="s-16">close</mat-icon>
+                                    </button>
+
+                                    <div>
+                                       
+أخذ ٣٠ وصغار هاربر. شواطيء معزّزة بالرّغم بحث عل, كما بزمام الآلاف للسيطرة عل. الباهضة بالسيطرة ٣٠ دار. عدد الجنوب الساحة لم, عليها القادة الخاسرة يبق عل, بـ معزّزة الثقيل ذلك. قام من يتمكن الجنود بالرّغم, ثم أما وقام قائمة. بل جنوب عُقر فرنسية الا.
+                                    </div>
+                                </div>
+                                <!-- / Back -->
+
+                            </fuse-widget>
+                            <!-- / WIDGET 1 -->
+
+                            <!-- WIDGET 2 -->
+                            <fuse-widget [@animate]="{value:'*',params:{y:'100%'}}" class="widget" fxLayout="column" fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="25">
+
+                                <!-- Front -->
+                                <div class="fuse-widget-front mat-white-bg mat-elevation-z2">
+                                    <div class="pl-16 pr-8 py-16 h-52" fxLayout="row" fxLayoutAlign="space-between center">
+
+                                        <button mat-icon-button fuseWidgetToggle class="fuse-widget-flip-button" aria-label="more">
+                                            <mat-icon>more_vert</mat-icon>
+                                        </button>
+                                    </div>
+
+                                    <div class="pt-8 pb-32" fxLayout="column" fxLayoutAlign="center center">
+                                        <div class="red-fg font-size-72 line-height-72">
+                                            {{widgets.widget2.data.count}}
+                                        </div>
+                                        <div class="h1 secondary-text font-weight-500">المرفوضة</div>
+                                    </div>
+
+                                </div>
+                                <!-- / Front -->
+
+                                <!-- Back -->
+                                <div class="fuse-widget-back p-16 pt-32 mat-white-bg mat-elevation-z2">
+                                    <button mat-icon-button fuseWidgetToggle class="fuse-widget-flip-button"
+                                            aria-label="Flip widget">
+                                        <mat-icon class="s-16">close</mat-icon>
+                                    </button>
+
+                                    <div>
+أخذ ٣٠ وصغار هاربر. شواطيء معزّزة بالرّغم بحث عل, كما بزمام الآلاف للسيطرة عل. الباهضة بالسيطرة ٣٠ دار. عدد الجنوب الساحة لم, عليها القادة الخاسرة يبق عل, بـ معزّزة الثقيل ذلك. قام من يتمكن الجنود بالرّغم, ثم أما وقام قائمة. بل جنوب عُقر فرنسية الا.
+
+                                    </div>
+                                </div>
+                                <!-- / Back -->
+
+                            </fuse-widget>
+                            <!-- / WIDGET 2 -->
+
+                            <!-- WIDGET 3 -->
+                            <fuse-widget [@animate]="{value:'*',params:{y:'100%'}}" class="widget" fxLayout="column" fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="25">
+
+                                <!-- Front -->
+                                <div class="fuse-widget-front mat-white-bg mat-elevation-z2">
+                                    <div class="pl-16 pr-8 py-16 h-52" fxLayout="row" fxLayoutAlign="space-between center">
+
+                                        <button mat-icon-button fuseWidgetToggle class="fuse-widget-flip-button" aria-label="more">
+                                            <mat-icon>more_vert</mat-icon>
+                                        </button>
+                                    </div>
+
+                                    <div class="pt-8 pb-32" fxLayout="column" fxLayoutAlign="center center">
+                                        <div class="orange-fg font-size-72 line-height-72">
+                                            {{widgets.widget3.data.count}}
+                                        </div>
+                                        <div class="h1 secondary-text font-weight-500">المقبولة</div>
+                                    </div>
+
+                                   
+                                </div>
+                                <!-- / Front -->
+
+                                <!-- Back -->
+                                <div class="fuse-widget-back p-16 pt-32 mat-white-bg mat-elevation-z2">
+                                    <button mat-icon-button fuseWidgetToggle class="fuse-widget-flip-button"
+                                            aria-label="Flip widget">
+                                        <mat-icon class="s-16">close</mat-icon>
+                                    </button>
+
+                                    <div>
+                                      
+أخذ ٣٠ وصغار هاربر. شواطيء معزّزة بالرّغم بحث عل, كما بزمام الآلاف للسيطرة عل. الباهضة بالسيطرة ٣٠ دار. عدد الجنوب الساحة لم, عليها القادة الخاسرة يبق عل, بـ معزّزة الثقيل ذلك. قام من يتمكن الجنود بالرّغم, ثم أما وقام قائمة. بل جنوب عُقر فرنسية الا.
+
+                                    </div>
+                                </div>
+                                <!-- / Back -->
+
+                            </fuse-widget>
+                            <!-- / WIDGET 3 -->
+
+                            <!-- WIDGET 4 -->
+                            <fuse-widget [@animate]="{value:'*',params:{y:'100%'}}" class="widget" fxLayout="column" fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="25">
+
+                                <!-- Front -->
+                                <div class="fuse-widget-front mat-white-bg mat-elevation-z2">
+                                    <div class="pl-16 pr-8 py-16 h-52" fxLayout="row" fxLayoutAlign="space-between center">
+
+                                        <button mat-icon-button fuseWidgetToggle class="fuse-widget-flip-button" aria-label="more">
+                                            <mat-icon>more_vert</mat-icon>
+                                        </button>
+                                    </div>
+
+                                    <div class="pt-8 pb-32" fxLayout="column" fxLayoutAlign="center center">
+                                        <div class="blue-grey-fg font-size-72 line-height-72">{{widgets.widget4.data.count}}
+                                        </div>
+                                        <div class="h1 secondary-text font-weight-500">المنتظرة</div>
+                                    </div>
+
+                                   
+                                </div>
+                                <!-- / Front -->
+
+                                <!-- Back -->
+                                <div class="fuse-widget-back p-16 pt-32 mat-white-bg mat-elevation-z2">
+                                    <button mat-icon-button fuseWidgetToggle class="fuse-widget-flip-button"
+                                            aria-label="Flip widget">
+                                        <mat-icon class="s-16">close</mat-icon>
+                                    </button>
+
+                                    <div>
+                                      
+أخذ ٣٠ وصغار هاربر. شواطيء معزّزة بالرّغم بحث عل, كما بزمام الآلاف للسيطرة عل. الباهضة بالسيطرة ٣٠ دار. عدد الجنوب الساحة لم, عليها القادة الخاسرة يبق عل, بـ معزّزة الثقيل ذلك. قام من يتمكن الجنود بالرّغم, ثم أما وقام قائمة. بل جنوب عُقر فرنسية الا.
+
+                                    </div>
+                                </div>
+                                <!-- / Back -->
+
+                            </fuse-widget>
+                            <!-- / WIDGET 4 -->
+
+
+                            <!-- WIDGET 5 -->
+                            <fuse-widget [@animate]="{value:'*',params:{y:'100%'}}" class="widget" fxLayout="row" fxFlex="100">
+
+                                <!-- Front -->
+                                <div class="fuse-widget-front mat-white-bg mat-elevation-z2">
+
+                                    <div class="px-16 border-bottom" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutWrap>
+
+                                        <div fxFlex class="py-8 h2">اجمالي الطلبات</div>
+
+                                        
+                                    </div>
+
+                                    <div fxLayout="row" fxLayoutAlign="start end" fxLayoutWrap>
+                                        <div class="h-420 mb-16" fxLayout="row" fxFlex="100" fxFlex.gt-sm="50">
+                                            <ngx-charts-bar-vertical-stacked
+                                                *fuseIfOnDom
+                                                [scheme]="widget5.scheme"
+                                                [results]="this.widgets.widget5.mainChart[this.widget5.currentRange]"
+                                                [gradient]="widget5.gradient"
+                                                [xAxis]="widget5.xAxis"
+                                                [yAxis]="widget5.yAxis"
+                                                [legend]="widget5.legend"
+                                                [showXAxisLabel]="widget5.showXAxisLabel"
+                                                [showYAxisLabel]="widget5.showYAxisLabel"
+                                                [xAxisLabel]="widget5.xAxisLabel"
+                                                [yAxisLabel]="widget5.yAxisLabel"
+                                                (select)="widget5.onSelect($event)">
+                                            </ngx-charts-bar-vertical-stacked>
+                                        </div>
+
+                                        <div class="mb-16" fxFlex="100" fxFlex.gt-sm="50" fxLayoutAlign="row" fxLayoutWrap>
+
+                                            <div fxLayout="column" fxFlex="100" fxFlex.gt-sm="50" fxLayoutAlign="center"
+                                                 *ngFor="let widget of widgets.widget5.supporting | keys ; let i = index">
+
+                                                <div class="px-24">
+                                                    <div class="h4 secondary-text">
+                                                        <span *ngIf="i == 0">أنشأت</span>
+                                                        <span *ngIf="i == 1">مغلقة</span>
+                                                        <span *ngIf="i == 2">قيد المعالجة</span>
+                                                        <span *ngIf="i == 3">مرفوضة</span>
+                                                        <span *ngIf="i == 4">مقبولة</span>
+                                                        <span *ngIf="i == 5">مرفوضة</span>
+
+
+
+
+
+                                                    </div>
+                                                    <div class="mat-display-1 m-0">
+                                                        {{widget.value.count[widget5.currentRange]}}
+                                                    </div>
+                                                </div>
+
+                                                <div class="h-64">
+                                                    <ngx-charts-area-chart
+                                                        *fuseIfOnDom
+                                                        [results]="widget.value.chart[widget5.currentRange]"
+                                                        [scheme]="widget5.supporting.scheme"
+                                                        [gradient]="widget5.supporting.gradient"
+                                                        [xAxis]="widget5.supporting.xAxis"
+                                                        [yAxis]="widget5.supporting.yAxis"
+                                                        [legend]="widget5.supporting.legend"
+                                                        [showXAxisLabel]="widget5.supporting.showXAxisLabel"
+                                                        [showYAxisLabel]="widget5.supporting.showYAxisLabel"
+                                                        [xAxisLabel]="widget5.supporting.xAxisLabel"
+                                                        [yAxisLabel]="widget5.supporting.yAxisLabel"
+                                                        [curve]="widget5.supporting.curve">
+                                                    </ngx-charts-area-chart>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- / Front -->
+
+                            </fuse-widget>
+                            <!-- / WIDGET 5 -->
+
+
+                            <!-- WIDGET 6 -->
+                            <fuse-widget [@animate]="{value:'*',params:{y:'100%'}}" class="widget" fxLayout="column" fxFlex="100" fxFlex.gt-sm="50">
+
+                                <!-- Front -->
+                                <div class="fuse-widget-front mat-white-bg mat-elevation-z2">
+
+                                    <div class="px-16 border-bottom" fxLayout="row" fxLayoutAlign="space-between center">
+                                        <div class="h2">توزع المهام</div>
+                                        
+                                    </div>
+
+                                    <div class="h-400">
+                                        <ngx-charts-pie-chart
+                                            *fuseIfOnDom
+                                            [scheme]="widget6.scheme"
+                                            [results]="widgets.widget6.mainChart[widget6.currentRange]"
+                                            [legend]="widget6.showLegend"
+                                            [explodeSlices]="widget6.explodeSlices"
+                                            [labels]="widget6.labels"
+                                            [doughnut]="widget6.doughnut"
+                                            [gradient]="widget6.gradient"
+                                            (select)="widget6.onSelect($event)">
+                                        </ngx-charts-pie-chart>
+                                    </div>
+
+                                    <div class="py-8 mh-16 border-top" fxLayout="row" fxLayoutAlign="start center" fxLayoutWrap>
+                                        <div class="py-8 border-right" fxLayout="column" fxLayoutAlign="center center" fxFlex="100" fxFlex.gt-sm="50">
+                                            <span class="mat-display-1 mb-0">{{widgets.widget6.footerLeft.count[widget6.currentRange]}}</span>
+                                            <span class="h4">المهام المضافة</span>
+                                        </div>
+
+                                        <div class="py-8" fxLayout="column" fxLayoutAlign="center center" fxFlex="100" fxFlex.gt-sm="50">
+                                            <span class="mat-display-1 mb-0">{{widgets.widget6.footerRight.count[widget6.currentRange]}}</span>
+                                            <span class="h4">المهام المكتملة</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- / Front -->
+
+                            </fuse-widget>
+                            <!-- / WIDGET 6 -->
+
+                      
+
+                        </div>
+                        <!-- / WIDGET GROUP -->
+
+
+                    </mat-tab>
+
+
+              
+                </mat-tab-group>
+
+            </div>
+            <!-- / CONTENT -->
+
+        </div>
+        <!-- / CENTER -->
+
+        <!-- SIDENAV -->
+        <mat-sidenav class="sidenav" align="end" mode="side" opened="true" fuseMatSidenavHelper="dashboards-right-sidenav" mat-is-locked-open="gt-md">
+
+            <div class="sidenav-content" fusePerfectScrollbar>
+
+                <!-- WIDGET GROUP -->
+                <div class="widget-group" fxLayout="column" fxFlex="100" *fuseIfOnDom [@animateStagger]="{value:'50'}">
+
+                    <!-- NOW WIDGET -->
+                    <fuse-widget [@animate]="{value:'*',params:{y:'100%'}}" class="sidenav-widget p-0">
+
+                        <!-- Front -->
+                        <div class="fuse-widget-front">
+
+                            <div class="pl-16 pr-8 py-16" fxLayout="row" fxLayoutAlign="space-between center">
+
+                                <div class="h3">الأحد {{dateNow | date: 'h:m:ss'}}</div>
+
+                                <div>
+                                    <button mat-icon-button [matMenuTriggerFor]="moreMenu" aria-label="more">
+                                        <mat-icon>more_vert</mat-icon>
+                                    </button>
+
+                                    <mat-menu #moreMenu="matMenu">
+                                        <button mat-menu-item aria-label="Flip widget">
+                                            Details
+                                        </button>
+                                    </mat-menu>
+                                </div>
+                            </div>
+
+                            <div class="p-16 pb-24" fxLayout="column" fxLayoutAlign="center center">
+                                <div class="h1 secondary-text">
+                                    <span>حزيران</span>
+                                </div>
+
+                                <div class="font-size-72 line-height-88 secondary-text font-weight-400">
+                                    {{dateNow | date: 'd'}}
+                                </div>
+
+                                <div class="h1 secondary-text">
+                                    <span>{{dateNow | date: 'y'}}</span>
+                                </div>
+                            </div>
+
+                            <mat-divider></mat-divider>
+                        </div>
+                        <!-- / Front -->
+
+                    </fuse-widget>
+                    <!-- / NOW WIDGET -->
+
+                    <!-- WEATHER WIDGET -->
+                    <fuse-widget [@animate]="{value:'*',params:{y:'100%'}}" class="sidenav-widget p-0">
+
+                        <!-- Front -->
+                        <div class="fuse-widget-front">
+
+                            <div class="pl-16 pr-8 py-16" fxLayout="row" fxLayoutAlign="space-between center">
+
+                                <div class="h4" fxLayout="row" fxLayoutAlign="start center">
+                                    <mat-icon class="mr-8">place</mat-icon>
+                                    دمشق
+                                </div>
+
+                                <div>
+                                    <button mat-icon-button [matMenuTriggerFor]="moreMenu" aria-label="more">
+                                        <mat-icon>more_vert</mat-icon>
+                                    </button>
+
+                                    <mat-menu #moreMenu="matMenu">
+                                        <button mat-menu-item aria-label="Flip widget">
+                                            Details
+                                        </button>
+                                    </mat-menu>
+                                </div>
+                            </div>
+
+                            <div class="p-16 pb-32" fxLayout="column" fxLayoutAlign="center center">
+
+                                <div fxLayout="row" fxLayoutAlign="center center">
+                                    <mat-icon fontSet="meteocons" [fontIcon]="widgets.weatherWidget.locations[widgets.weatherWidget.currentLocation].icon"
+                                              class="icon s-40 mr-16"></mat-icon>
+                                    <span class="mat-display-2 m-0 font-weight-300 secondary-text">
+                                       18
+                                    </span>
+                                    <span class="font-size-48 font-weight-300 hint-text text-super ml-8">°</span>
+                                    <span class="mat-display-2 mb-0 font-weight-300 hint-text ng-binding">C</span>
+                                </div>
+                            </div>
+
+                            <div class="grey-300-bg p-16" fxLayout="row" fxLayoutAlign="space-between center">
+                                <div fxLayout="row" fxLayoutAlign="start center">
+                                    <mat-icon fontSet="meteocons" fontIcon="icon-windy" class="mr-8 s-16"></mat-icon>
+                                    <span>
+                                        {{widgets.weatherWidget.locations[widgets.weatherWidget.currentLocation].windSpeed[widgets.weatherWidget.speedUnit]}}
+                                    </span>
+                                    <span class="secondary-text ml-5">{{widgets.weatherWidget.speedUnit}}</span>
+                                </div>
+
+                                <div fxLayout="row" fxLayoutAlign="start center">
+                                    <mat-icon fontSet="meteocons" fontIcon="icon-compass" class="mr-8 s-16"></mat-icon>
+                                    <span>{{widgets.weatherWidget.locations[widgets.weatherWidget.currentLocation].windDirection}}</span>
+                                </div>
+
+                                <div fxLayout="row" fxLayoutAlign="start center">
+                                    <mat-icon fontSet="meteocons" fontIcon="icon-rainy" class="mr-8 s-16"></mat-icon>
+                                    <span>{{widgets.weatherWidget.locations[widgets.weatherWidget.currentLocation].rainProbability}}</span>
+                                </div>
+                            </div>
+
+                            <div class="py-16">
+                                <div class="py-16 px-24" fxLayout="row" fxLayoutAlign="space-between center"
+                                     *ngFor="let day of widgets.weatherWidget.locations[widgets.weatherWidget.currentLocation].next3Days ; let i = index ">
+                                    <span *ngIf="i == 0" class="h4">الأحد</span>
+                                    <span *ngIf="i == 1"  class="h4">الاثنين</span>
+                                    <span *ngIf="i == 2" class="h4">الثلاثاء</span>
+                                    <div fxLayout="row" fxLayoutAlign="start center">
+                                        <mat-icon fontSet="meteocons" [fontIcon]="day.icon" class="mr-16"></mat-icon>
+                                        <span class="h2">{{day.temp[widgets.weatherWidget.tempUnit]}}</span>
+                                        <span class="h2 font-weight-300 secondary-text text-super">&deg;</span>
+                                        <span class="h2 font-weight-300 secondary-text">{{widgets.weatherWidget.tempUnit}}</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <mat-divider></mat-divider>
+
+                        </div>
+                        <!-- / Front -->
+
+                    </fuse-widget>
+                    <!-- / WEATHER WIDGET -->
+
+                </div>
+                <!-- / WIDGET GROUP -->
+            </div>
+
+        </mat-sidenav>
+        <!-- / SIDENAV -->
+
+    </mat-sidenav-container>
+
+</div>

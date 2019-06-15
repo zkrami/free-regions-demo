@@ -1,0 +1,14 @@
+// Import Fuse main library
+@import "app/core/scss/core";
+
+.text-right{
+    text-align: right;
+}
+
+.no-text-decoration{
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+    }
+}
+
