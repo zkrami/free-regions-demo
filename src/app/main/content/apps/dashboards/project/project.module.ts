@@ -6,6 +6,7 @@ import { ProjectsDashboardService } from './projects.service';
 import { FuseWidgetModule } from '../../../../../core/components/widget/widget.module';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { MaterialModule } from '../../../../../core/modules/material.module';
+import { MatTableModule } from '@angular/material';
 
 const routes: Routes = [
     {
@@ -24,6 +25,7 @@ const routes: Routes = [
         FuseWidgetModule,
         NgxChartsModule,
         MaterialModule,
+        
     ],
     declarations: [
         FuseProjectComponent

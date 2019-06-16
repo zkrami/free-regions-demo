@@ -9,34 +9,41 @@ import { MatTableDataSource } from '@angular/material';
 
 
 const COLORS: string[] = [
-    'green', 'red', 'navy'
+    'accent', 'danger', 'primary'
 ];
 const STATUS: string[] = [
     'مقبول', 'مرفوض', 'انتظار'
 ];
 
 
-const entries: { color: string, name: string, status: string, organization: string }[] = [
+const entries: { color: string, name: string, status: string, organization: string , number:number }[] = [
     {
-        color: "red",
+        color: "danger",
         status: "مرفوض",
         organization: "الادارة",
         name: "طلب استثمار عقار"
+        , number : 4 
+
     }, {
-        color: "green",
+        color: "accent",
         status: "مقبول",
         name: "طلب تركيب خطوط",
         organization: "الهيئة العامة"
+        , number : 3 
+
     }, {
-        color: "navy",
+        color: "primary",
         status: "انتظار",
         name: "طلب حجز مكان",
         organization: "المقاسم"
+        , number : 2
+
     }, {
-        color: "green",
+        color: "accent",
         status: "مقبول",
         name: "طلب تقديم عضوية",
         organization: "لجنة المنطقة"
+        , number : 1 
     }
 
 ]
@@ -52,7 +59,7 @@ export class FuseProjectComponent implements OnInit, OnDestroy {
     projects: any[];
     selectedProject: any;
     dataSource: MatTableDataSource<any>;
-
+    displayedColumns  =  [ "project" ,  "number" , "name" ,  "organization" , "status"] ;
     widgets: any;
     widget5: any = {};
     widget6: any = {};
@@ -172,7 +179,6 @@ export class FuseProjectComponent implements OnInit, OnDestroy {
         }, 1000);
 
 
-        this.dataSource =  new MatTableDataSource(entries);
 
     }
 
@@ -183,6 +189,9 @@ export class FuseProjectComponent implements OnInit, OnDestroy {
         this.widget11.onContactsChanged = new BehaviorSubject({});
         this.widget11.onContactsChanged.next(this.widgets.widget11.table.rows);
         this.widget11.dataSource = new FilesDataSource(this.widget11);
+
+        this.dataSource =  new MatTableDataSource(entries.reverse());
+
     }
 
     ngOnDestroy() {
