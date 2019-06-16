@@ -5,6 +5,7 @@ import { SharedModule } from '../../../../../core/modules/shared.module';
 import { ProjectsDashboardService } from './projects.service';
 import { FuseWidgetModule } from '../../../../../core/components/widget/widget.module';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { MaterialModule } from '../../../../../core/modules/material.module';
 
 const routes: Routes = [
     {
@@ -21,7 +22,8 @@ const routes: Routes = [
         SharedModule,
         RouterModule.forChild(routes),
         FuseWidgetModule,
-        NgxChartsModule
+        NgxChartsModule,
+        MaterialModule,
     ],
     declarations: [
         FuseProjectComponent

@@ -5,18 +5,53 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Observable } from 'rxjs/Observable';
 import { DataSource } from '@angular/cdk/collections';
 import { fuseAnimations } from '../../../../../core/animations';
+import { MatTableDataSource } from '@angular/material';
+
+
+const COLORS: string[] = [
+    'green', 'red', 'navy'
+];
+const STATUS: string[] = [
+    'مقبول', 'مرفوض', 'انتظار'
+];
+
+
+const entries: { color: string, name: string, status: string, organization: string }[] = [
+    {
+        color: "red",
+        status: "مرفوض",
+        organization: "الادارة",
+        name: "طلب استثمار عقار"
+    }, {
+        color: "green",
+        status: "مقبول",
+        name: "طلب تركيب خطوط",
+        organization: "الهيئة العامة"
+    }, {
+        color: "navy",
+        status: "انتظار",
+        name: "طلب حجز مكان",
+        organization: "المقاسم"
+    }, {
+        color: "green",
+        status: "مقبول",
+        name: "طلب تقديم عضوية",
+        organization: "لجنة المنطقة"
+    }
+
+]
 
 @Component({
-    selector     : 'fuse-project',
-    templateUrl  : './project.component.html',
-    styleUrls    : ['./project.component.scss'],
+    selector: 'fuse-project',
+    templateUrl: './project.component.html',
+    styleUrls: ['./project.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    animations   : fuseAnimations
+    animations: fuseAnimations
 })
-export class FuseProjectComponent implements OnInit, OnDestroy
-{
+export class FuseProjectComponent implements OnInit, OnDestroy {
     projects: any[];
     selectedProject: any;
+    dataSource: MatTableDataSource<any>;
 
     widgets: any;
     widget5: any = {};
@@ -28,8 +63,7 @@ export class FuseProjectComponent implements OnInit, OnDestroy
 
     dateNow = Date.now();
 
-    constructor(private projectsDashboardService: ProjectsDashboardService)
-    {
+    constructor(private projectsDashboardService: ProjectsDashboardService) {
         this.projects = this.projectsDashboardService.projects;
 
         this.selectedProject = this.projects[0];
@@ -40,35 +74,35 @@ export class FuseProjectComponent implements OnInit, OnDestroy
          * Widget 5
          */
         this.widget5 = {
-            currentRange  : 'TW',
-            xAxis         : true,
-            yAxis         : true,
-            gradient      : false,
-            legend        : false,
+            currentRange: 'TW',
+            xAxis: true,
+            yAxis: true,
+            gradient: false,
+            legend: false,
             showXAxisLabel: false,
-            xAxisLabel    : 'Days',
+            xAxisLabel: 'Days',
             showYAxisLabel: false,
-            yAxisLabel    : 'Isues',
-            scheme        : {
+            yAxisLabel: 'Isues',
+            scheme: {
                 domain: ['#42BFF7', '#C6ECFD', '#C7B42C', '#AAAAAA']
             },
-            onSelect      : (ev) => {
+            onSelect: (ev) => {
                 console.log(ev);
             },
-            supporting    : {
-                currentRange  : '',
-                xAxis         : false,
-                yAxis         : false,
-                gradient      : false,
-                legend        : false,
+            supporting: {
+                currentRange: '',
+                xAxis: false,
+                yAxis: false,
+                gradient: false,
+                legend: false,
                 showXAxisLabel: false,
-                xAxisLabel    : 'Days',
+                xAxisLabel: 'Days',
                 showYAxisLabel: false,
-                yAxisLabel    : 'Isues',
-                scheme        : {
+                yAxisLabel: 'Isues',
+                scheme: {
                     domain: ['#42BFF7', '#C6ECFD', '#C7B42C', '#AAAAAA']
                 },
-                curve         : shape.curveBasis
+                curve: shape.curveBasis
             }
         };
 
@@ -76,16 +110,16 @@ export class FuseProjectComponent implements OnInit, OnDestroy
          * Widget 6
          */
         this.widget6 = {
-            currentRange : 'TW',
-            legend       : false,
+            currentRange: 'TW',
+            legend: false,
             explodeSlices: false,
-            labels       : true,
-            doughnut     : true,
-            gradient     : false,
-            scheme       : {
+            labels: true,
+            doughnut: true,
+            gradient: false,
+            scheme: {
                 domain: ['#f44336', '#9c27b0', '#03a9f4', '#e91e63']
             },
-            onSelect     : (ev) => {
+            onSelect: (ev) => {
                 console.log(ev);
             }
         };
@@ -101,15 +135,15 @@ export class FuseProjectComponent implements OnInit, OnDestroy
          * Widget 8
          */
         this.widget8 = {
-            legend       : false,
+            legend: false,
             explodeSlices: false,
-            labels       : true,
-            doughnut     : false,
-            gradient     : false,
-            scheme       : {
+            labels: true,
+            doughnut: false,
+            gradient: false,
+            scheme: {
                 domain: ['#f44336', '#9c27b0', '#03a9f4', '#e91e63', '#ffc107']
             },
-            onSelect     : (ev) => {
+            onSelect: (ev) => {
                 console.log(ev);
             }
         };
@@ -118,29 +152,31 @@ export class FuseProjectComponent implements OnInit, OnDestroy
          * Widget 9
          */
         this.widget9 = {
-            currentRange  : 'TW',
-            xAxis         : false,
-            yAxis         : false,
-            gradient      : false,
-            legend        : false,
+            currentRange: 'TW',
+            xAxis: false,
+            yAxis: false,
+            gradient: false,
+            legend: false,
             showXAxisLabel: false,
-            xAxisLabel    : 'Days',
+            xAxisLabel: 'Days',
             showYAxisLabel: false,
-            yAxisLabel    : 'Isues',
-            scheme        : {
+            yAxisLabel: 'Isues',
+            scheme: {
                 domain: ['#42BFF7', '#C6ECFD', '#C7B42C', '#AAAAAA']
             },
-            curve         : shape.curveBasis
+            curve: shape.curveBasis
         };
 
         setInterval(() => {
             this.dateNow = Date.now();
         }, 1000);
 
+
+        this.dataSource =  new MatTableDataSource(entries);
+
     }
 
-    ngOnInit()
-    {
+    ngOnInit() {
         /**
          * Widget 11
          */
@@ -149,27 +185,23 @@ export class FuseProjectComponent implements OnInit, OnDestroy
         this.widget11.dataSource = new FilesDataSource(this.widget11);
     }
 
-    ngOnDestroy()
-    {
+    ngOnDestroy() {
     }
 
 }
 
 export class FilesDataSource extends DataSource<any>
 {
-    constructor(private widget11)
-    {
+    constructor(private widget11) {
         super();
     }
 
     /** Connect function called by the table to retrieve one stream containing the data to render. */
-    connect(): Observable<any[]>
-    {
+    connect(): Observable<any[]> {
         return this.widget11.onContactsChanged;
     }
 
-    disconnect()
-    {
+    disconnect() {
     }
 }
 
