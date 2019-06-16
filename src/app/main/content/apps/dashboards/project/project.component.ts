@@ -59,7 +59,7 @@ export class FuseProjectComponent implements OnInit, OnDestroy {
     projects: any[];
     selectedProject: any;
     dataSource: MatTableDataSource<any>;
-    displayedColumns  =  [ "project" ,  "number" , "name" ,  "organization" , "status"] ;
+    displayedColumns  =  [ "print" ,  "number" , "name" ,  "organization" , "status"] ;
     widgets: any;
     widget5: any = {};
     widget6: any = {};
